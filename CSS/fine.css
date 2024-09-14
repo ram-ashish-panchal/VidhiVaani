@@ -1,0 +1,18 @@
+.fine-body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("/public/fine.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    background-color: hsla(175, 22%, 51%, 0.3);
+    width:60%;
+    height:95%;
+    border-radius: 5px;
+    overflow-y: auto;
+
+}
