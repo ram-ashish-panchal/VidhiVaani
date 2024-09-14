@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 import "../CSS/home.css";
 function App() {
+  /**
+   * Adds a query to the chat log
+   * @function addQuerry
+   * @description Creates a new paragraph element and appends it to the chat log.
+   *              Also appends a line break element. Clears the value of the input
+   *              field and scrolls the content div to the bottom of its
+   *              scrollHeight.
+   */
   function addQuerry() {
     const contentDiv = document.getElementsByClassName("content")[0];
     const inputField = document.getElementsByClassName("input-area")[0];
@@ -55,7 +63,7 @@ function App() {
           <input
             className="input-area"
             type="text"
-            placeholder="Satyamev jayate"
+            placeholder="Satyamev Jayate"
           />
           <button type="button" className="send-button" onClick={addQuerry}>
             send
