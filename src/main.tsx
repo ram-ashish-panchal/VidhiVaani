@@ -1,12 +1,13 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import App from "./App";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Fine from "./Fine.jsx";
+import Fine from "./Fine";
+import React from "react";
 
 const myRoutes = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,6 @@ const myRoutes = createBrowserRouter(
   )
 );
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root") as HTMLElement).render(
   <RouterProvider router={myRoutes} />
 );
