@@ -10,7 +10,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background-color: hsl(0, 0%, 0%);
+  background-color:  hsl(0, 0%, 11%);
   font-family: Arial, sans-serif;
   height: 100vh;
 }
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 8%;
+    height: 6%;
     color: white;
     justify-content: space-between;
   }
@@ -76,7 +76,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 8%;
+    height: 6%;
     color: white;
     justify-content: space-between;
   }
@@ -130,7 +130,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 8%;
+    height: 6%;
     color: white;
     justify-content: space-between;
   }
@@ -187,10 +187,14 @@ body {
   height: 100vh;
 }
 
-/*hover state of emblem*/
+/*amblem*/
+.emblem {
+  filter: drop-shadow(1px 1px 200px gold);
+}
 
+/*hover state of emblem*/
 .emblem:hover {
-  filter: drop-shadow(1px 1px 10px gold);
+  filter: drop-shadow(1px 1px 150px gold);
 }
 
 /*logo css*/
@@ -232,6 +236,7 @@ body {
   margin: 5px;
   max-width: fit-content;
   word-wrap: break-word;
+  width: 70%;
 }
 
 .chakra {
@@ -250,7 +255,7 @@ body {
 }
 
 .pay-button {
-  height: 70%;
+  height: 100%;
   padding-inline: 40px;
   border-top-left-radius: 60px;
   border-bottom-left-radius: 60px;
