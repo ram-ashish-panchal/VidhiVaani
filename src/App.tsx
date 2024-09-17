@@ -65,16 +65,19 @@ const App: React.FC = () => {
     };
   }, [inputValue]);
 
+  //code of pay button for future
+  // <Link to="/fine">
+  //           <button type="button" className="pay-button">
+  //             Pay
+  //           </button>
+  //         </Link>
+
   return (
     <>
       <div className="main-body">
         <div className="header">
           <img className="logo" src="/images/logo.png" alt="logo" />
-          <Link to="/fine">
-            <button type="button" className="pay-button">
-              Pay
-            </button>
-          </Link>
+          
         </div>
         <div className="content">
           <img
@@ -88,16 +91,16 @@ const App: React.FC = () => {
                 key={index}
                 style={{
                   backgroundColor:
-                    msg.type === MessageType.Sent ? "black" : "white",
-                  color: msg.type === MessageType.Sent ? "white" : "black",
+                    msg.type === MessageType.Sent ? "white" : "black",
+                  color: msg.type === MessageType.Sent ? "black" : "white",
                   fontSize: "large",
                   fontWeight: 200,
-                  padding: "10px 10px 10px 30px",
-                  borderRadius: "50px 8px 8px 8px",
-                  margin: "5px",
+                  padding: msg.type === MessageType.Sent ?"10px 10px 10px 30px": "10px 30px 10px 10px",
+                  borderRadius: msg.type === MessageType.Sent ? "50px 8px 8px 8px" : "8px 50px 8px 8px",
+                  margin: "7px",
                   maxWidth: "fit-content",
                   wordWrap: "break-word",
-                  textAlign: msg.type === MessageType.Sent ? "right" : "left",
+                  textAlign:"left",
                   marginLeft: msg.type === MessageType.Sent ? "auto" : "0",
                   marginRight: msg.type === MessageType.Sent ? "0" : "auto",
                 }}
