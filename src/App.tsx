@@ -21,6 +21,10 @@ const App: React.FC = () => {
   const [inputValue, setInputValue] = useState("");
   const chatRef = useRef<HTMLDivElement>(null);
 
+  // addMessage(
+  //   MessageType.Received,
+  //   "Welcome to Vidhi Vaani, your personal law assistant."
+  // );
   const sendQueryToBackend = async (data: string): Promise<void> => {
     try {
       const response = await axios.get(
@@ -55,10 +59,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-    addMessage(
-      MessageType.Received,
-      "Welcome to Vidhi Vaani, your personal law assistant."
-    );
+
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
