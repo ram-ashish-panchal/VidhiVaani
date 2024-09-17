@@ -7,6 +7,12 @@ enum MessageType {
   Sent = "Sent",
   Received = "Received",
 }
+type ButtonData = {
+  text: string;
+  link: string;
+  toSend: string;
+  icon: string;
+};
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<
@@ -34,6 +40,8 @@ const App: React.FC = () => {
     }
   };
 
+  const addButton = (data: ButtonData[]): void => {};
+
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === "Enter") {
       const trimmedValue = inputValue.trim();
@@ -47,6 +55,10 @@ const App: React.FC = () => {
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
+    addMessage(
+      MessageType.Received,
+      "Welcome to Vidhi Vaani, your personal law assistant."
+    );
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
